@@ -1,0 +1,27 @@
+.freight-toggle{
+    height:45px;
+    display:grid;
+    align-items: center;
+    grid-template-columns: 60px 1fr;
+    grid-column-gap:5px;
+    grid-template-rows: 45px;
+    .info-string{
+        font-size:12px;
+        text-align: left;
+    }
+    .source-toggle{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        grid-template-rows: 26px;
+        max-width: 60px;
+        height:30px;
+        border: 2px solid #c8c8c8;
+        div{
+            display:grid;
+            align-content: center;
+        }
+        .selected{
+            background: #a6a6a6;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+.subset-detail{
+    background:#f7f7f7;
+    border: 2px solid #c8c8c8;
+    display: grid;
+    align-items: center;
+    &.selected{
+        background:#c8c8c8;
+    }
+
+}
+.subset-detail:hover{
+    background:#c8c8c8;
+}

@@ -1,0 +1,41 @@
+.freight-display-card{
+    max-width: 350px;
+    height: 175px;
+    background:#f7f7f7;
+    border:2px solid #c8c8c8;
+    display:grid;
+    padding: 5px;
+    border-radius: 1px;
+
+    .freight-display--client-name{
+        font-size: 20px;
+        justify-self: flex-start;
+       
+    }
+    .freight-display--transportation-schedule{
+        grid-template-columns: 145px 1fr;
+        display: grid;
+        justify-items:flex-start;
+
+        .arrival{
+            justify-self:center;
+        }
+    }
+    .shipment-id{
+        display: grid;
+        justify-content: flex-start;
+        .shipment-id-text{
+            font-size:12px;
+        }
+    }
+    .freight-display--transportation-modestatus{
+        grid-template-columns: 175px 1fr;
+        display: grid;
+        justify-items:flex-start;
+
+        .shipping-mode{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}

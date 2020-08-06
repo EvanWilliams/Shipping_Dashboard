@@ -1,0 +1,15 @@
+.shipment-display--header{
+    padding: 16px;
+    border-bottom: solid 2px #c8c8c8;
+    background: #f7f7f7;
+    margin-bottom: 16px;
+}
+
+.shipment-display--grid{
+    display:grid;
+    grid-template-columns: repeat( auto-fit, 300px);
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+    justify-content: center;
+    margin-bottom:16px;
+}
