@@ -6,6 +6,9 @@ class FreightDashboard extends Component {
 
     constructor() {
         super();
+        this.state ={ 
+
+        }
     }
 
     render() {
@@ -28,13 +31,18 @@ class FreightDashboard extends Component {
         });
 
         let filteredShipmentData = this.props.shipmentsData.filter((shipment) => {
-            debugger;
             if(filters["STATUS"].includes(shipment.Status) && filters["MODE"].includes(shipment.Mode) && shipment["Shipment ID"].includes(filters["ID"]) && shipment["Client Name"].includes(filters["CLIENT NAME"]) ){
                 return true;
             }
             else{
                 return false;
             }
+        });
+
+        filteredShipmentData = filteredShipmentData.sort((a,b) =>{
+            let aDate = Date.parse(a["Estimated Departure"]);
+            let bDate = Date.parse(b["Estimated Departure"]);
+            return aDate - bDate
         });
 
         return (
@@ -44,6 +52,7 @@ class FreightDashboard extends Component {
                     {filteredShipmentData.map((shipment) => {
                         return (
                             <FreightDisplayCard
+                                key={shipment["Shipment ID"]}
                                 shipmentData={shipment}
                             >
                             </FreightDisplayCard>

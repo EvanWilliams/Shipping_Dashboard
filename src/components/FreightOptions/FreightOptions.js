@@ -5,11 +5,9 @@ import { connect } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCaretUp, faCaretDown} from '@fortawesome/free-solid-svg-icons'
 import './FreightOptions.scss';
-import * as actions from '../../store/actionTypes';
-//import LayoutOption from './BuildBox/LayoutOption/LayoutOption';
 import ElementDetail from './Element-Detail/Element-Detail';
 import SubsetOption from './SubsetOption/SubsetOption';
-class PageGenerator extends Component {
+class FreightOptions extends Component {
 
     constructor() {
         super();
@@ -42,7 +40,9 @@ class PageGenerator extends Component {
                         <div className="menu-container">
                             <ul id="primary-menu" className={`nav-menu ${this.state.toggleClass ? "active" : "inactive"}`}>
                                 <li onClick={(event) => this.handleClick(event)} id="menu-item-31" className={`${this.state.toggleClass ? "active" : "inactive"}`}><a>{caret}</a></li>
-                                <li id="menu-item-15" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-15"><NavLink exact activeClassName="selectedLink" to="/fresh-fish/">FRESH FISH</NavLink></li>
+                                <li><NavLink exact activeClassName="selectedLink" to="/">NAV 1</NavLink></li>
+                                <li><NavLink activeClassName="selectedLink" to="/">NAV 2</NavLink></li>
+                                <li><NavLink activeClassName="selectedLink" to="/">NAV 3</NavLink></li>
                             </ul>
                         </div> 
                     </nav>
@@ -53,6 +53,7 @@ class PageGenerator extends Component {
                             {this.props.subsetOptions.map((element) => {
                                 return(
                                     <SubsetOption
+                                        key={element.id}
                                         type={element.type}
                                         id={element.id}
                                         selected={element.selected}
@@ -69,16 +70,9 @@ class PageGenerator extends Component {
     }
 }
 
-const mapDispatchToProps = dispatch => {
-    return {
-        // onLayoutOptionRemoved: (id) => dispatch(actions.removeLayoutOption(id)),
-        // onSelectLayoutOption: (index) => dispatch(actions.selectLayoutOption(index))
-    };
-}
-
 const mapStateToProps = state => {
     return{
         subsetOptions: state.subsetOptions,
     };
 }
-export default connect(mapStateToProps,mapDispatchToProps)(PageGenerator);
+export default connect(mapStateToProps)(FreightOptions);

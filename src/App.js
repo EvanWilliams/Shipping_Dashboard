@@ -12,9 +12,9 @@ function App() {
       <BrowserRouter>
         <div className="App">
           <Baseview />
-          <Switch>
-              <Route path="/" component={Sample}></Route>
-          </Switch>
+            <Switch>
+                <Route path="/" component={Sample}></Route>
+            </Switch>
           <Footer/>
         </div>
       </BrowserRouter>

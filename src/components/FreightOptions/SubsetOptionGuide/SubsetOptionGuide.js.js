@@ -12,6 +12,7 @@ const Guide = {
             type:"checkbox",
             options:[
                 {"key":"Roll-Over", "allowed":true},
+                {"key":"TransportError", "allowed":true},
                 {"key":"Cancelled", "allowed":true},
                 {"key":"Customs Hold", "allowed":true},
                 {"key":"In Transit", "allowed":true},
