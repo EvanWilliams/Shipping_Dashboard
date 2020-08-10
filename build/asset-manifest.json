@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e012759c.chunk.css",
+    "main.js": "/static/js/main.c803fd05.chunk.js",
+    "main.js.map": "/static/js/main.c803fd05.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.dee1cd4b.js",
+    "runtime-main.js.map": "/static/js/runtime-main.dee1cd4b.js.map",
+    "static/js/2.f1cafe95.chunk.js": "/static/js/2.f1cafe95.chunk.js",
+    "static/js/2.f1cafe95.chunk.js.map": "/static/js/2.f1cafe95.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.78f16c9758d2da64ed3f227fc17c4861.js": "/precache-manifest.78f16c9758d2da64ed3f227fc17c4861.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.e012759c.chunk.css.map": "/static/css/main.e012759c.chunk.css.map",
+    "static/js/2.f1cafe95.chunk.js.LICENSE.txt": "/static/js/2.f1cafe95.chunk.js.LICENSE.txt",
+    "static/media/FreightOptions.scss": "/static/media/Rubik-Regular.b3d0902b.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.dee1cd4b.js",
+    "static/js/2.f1cafe95.chunk.js",
+    "static/css/main.e012759c.chunk.css",
+    "static/js/main.c803fd05.chunk.js"
+  ]
+}
