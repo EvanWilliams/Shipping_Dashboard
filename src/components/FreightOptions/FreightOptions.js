@@ -1,10 +1,9 @@
 import React,{ Component} from 'react';
-import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCaretUp, faCaretDown} from '@fortawesome/free-solid-svg-icons'
-import './FreightOptions.scss';
+import classes from './FreightOptions.module.scss';
 import ElementDetail from './Element-Detail/Element-Detail';
 import SubsetOption from './SubsetOption/SubsetOption';
 class FreightOptions extends Component {
@@ -33,23 +32,19 @@ class FreightOptions extends Component {
             caret = (<FontAwesomeIcon icon={faCaretUp} />)
         }
         return(
-            <header id="masthead" className="site-header">
-
-                <div id="navbar" className="navbar">
-                    <nav id="site-navigation" className="navigation main-navigation" role="navigation">
-                        <div className="menu-container">
-                            <ul id="primary-menu" className={`nav-menu ${this.state.toggleClass ? "active" : "inactive"}`}>
-                                <li onClick={(event) => this.handleClick(event)} id="menu-item-31" className={`${this.state.toggleClass ? "active" : "inactive"}`}><a>{caret}</a></li>
-                                <li><NavLink exact activeClassName="selectedLink" to="/">NAV 1</NavLink></li>
-                                <li><NavLink activeClassName="selectedLink" to="/">NAV 2</NavLink></li>
-                                <li><NavLink activeClassName="selectedLink" to="/">NAV 3</NavLink></li>
+            <div>
+                <div className={classes["navbar"]}>
+                    <nav className={classes["main-navigation"]}>
+                        <div>
+                            <ul className={classes["nav-menu"] + " " + (this.state.toggleClass ? classes["active"] : classes["inactive"])}>
+                                <li onClick={(event) => this.handleClick(event)} className={this.state.toggleClass ? classes["active"] : classes["inactive"]}><a>{caret}</a></li>
                             </ul>
                         </div> 
                     </nav>
                 </div>
-                <div className={`pop-out-pane ${this.state.toggleClass ? "active" : "inactive"}`}>
-                    <div className="box-wrapper">
-                        <div className="draggable-menu">
+                <div className={classes["pop-out-pane"] + " " + (this.state.toggleClass ? classes["active"] : classes["inactive"])}>
+                    <div className={classes["box-wrapper"]}>
+                        <div className={classes["draggable-menu"]}>
                             {this.props.subsetOptions.map((element) => {
                                 return(
                                     <SubsetOption
@@ -65,7 +60,7 @@ class FreightOptions extends Component {
                         <ElementDetail></ElementDetail>
                     </div>
                 </div>
-            </header>
+            </div>
         );
     }
 }
