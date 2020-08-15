@@ -44,7 +44,7 @@ class FreightOptions extends Component {
                 </div>
                 <div className={classes["pop-out-pane"] + " " + (this.state.toggleClass ? classes["active"] : classes["inactive"])}>
                     <div className={classes["box-wrapper"]}>
-                        <div className={classes["draggable-menu"]}>
+                        <div className={classes["subset-menu"]}>
                             {this.props.subsetOptions.map((element) => {
                                 return(
                                     <SubsetOption

@@ -1,6 +1,6 @@
 import * as actionTypes from './actionTypes';
 import FreightData from './FreightData';
-import SubsetOptionGuide from '../components/FreightOptions/SubsetOptionGuide/SubsetOptionGuide.js';
+import SubsetOptionGuide from '../components/FreightOptions/SubsetOption/SubsetOptionGuide.js';
 const initialState = {
     subsetOptions:[
         {
